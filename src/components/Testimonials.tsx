@@ -13,12 +13,6 @@ const Testimonials = () => {
       role: 'Director Legal, IT & Consulting at vista neotech',
       content: 'Working with them was a great experience. They brought valuable insights to our project and delivered ahead of schedule.',
       image: 'https://lh3.googleusercontent.com/p/AF1QipNCbub37OG5SFA0noOjfwm-yavw-4suG6Zin3uR=s680-w680-h510',
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Lead Developer at WebSolutions',
-      content: 'Their technical expertise and collaborative approach made them an invaluable addition to our team. Would definitely work with them again.',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80',
     }
   ];
 
