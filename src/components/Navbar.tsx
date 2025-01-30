@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Blog', href: '#blog' },
+    // { name: 'Blog', href: '#blog' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -29,7 +29,7 @@ const Navbar: React.FC<NavbarProps> = ({
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <a href="#" className="text-xl font-bold text-gray-900 dark:text-white">
-              ADITYA SHARMA
+              ADITYA RAJ
             </a>
           </div>
 

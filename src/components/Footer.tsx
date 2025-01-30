@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-span-2">
             <h3 className="text-xl font-bold mb-4">Portfolio</h3>
             <p className="text-gray-400 mb-4">
-              Building exceptional digital experiences with modern web technologies.
+              Crafting innovative web solutions with passion and expertise in modern technologies.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">
@@ -46,7 +46,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-gray-400">San Francisco, CA</li>
+              <li className="text-gray-400">Delhi India</li>
               <li className="text-gray-400">adityaraj9843@gmail.com</li>
               <li className="text-gray-400">+91 6295750823</li>
             </ul>

@@ -10,20 +10,7 @@ const Achievements = () => {
       date: '2024',
       description: 'Professional certification for designing distributed systems on AWS',
     },
-    {
-      icon: Trophy,
-      title: 'Best Web Application Award',
-      organization: 'TechConf 2023',
-      date: '2023',
-      description: 'Recognized for innovative use of modern web technologies',
-    },
-    {
-      icon: Award,
-      title: 'Google Cloud Professional',
-      organization: 'Google',
-      date: '2023',
-      description: 'Certified in designing and managing cloud solutions',
-    },
+
   ];
 
   return (

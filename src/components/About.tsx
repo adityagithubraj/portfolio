@@ -4,7 +4,7 @@ import { Download } from 'lucide-react';
 const About = () => {
   const timeline = [
     {
-      year: 'Sep 2024 - Present - Present',
+      year: 'Sep 2024 - Present',
       title: 'Software Engineer',
       company: 'Vista Neotech Private Limited',
       description: 'Working on full-stack development projects and building scalable applications',
@@ -30,7 +30,7 @@ const About = () => {
          
             <div className="mt-8">
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1ECanQTFeeuZW-VCC94HgAjsgij_q1WUv/view?usp=sharing"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <Download size={20} className="mr-2" />

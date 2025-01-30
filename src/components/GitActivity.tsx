@@ -19,15 +19,15 @@ export default function GitActivity() {
             <p className="text-gray-600 dark:text-gray-300">Contributions</p>
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">50+</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">86</h3>
             <p className="text-gray-600 dark:text-gray-300">Repositories</p>
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">200+</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">27+</h3>
             <p className="text-gray-600 dark:text-gray-300">Stars</p>
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">100+</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">77</h3>
             <p className="text-gray-600 dark:text-gray-300">Followers</p>
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function GitActivity() {
           />
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Top Repositories</h3>
             <div className="space-y-4">
@@ -73,7 +73,7 @@ export default function GitActivity() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

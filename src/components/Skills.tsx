@@ -1,5 +1,23 @@
 import React from 'react';
 import { Code2, FileJson, Palette, Layout, Server, Database, Cpu, Box, Container, Cloud, GitBranch, Github as Git, Terminal, Send, Figma as FigmaIcon, TestTube } from 'lucide-react';
+// Import skill icons
+import { Github as GitIcon } from '@primer/octicons-react';
+import reactIcon from '../assets/skills/react.png';
+import typescriptIcon from '../assets/skills/typescript.png';
+import tailwindIcon from '../assets/skills/tailwind.png';
+import htmlcssIcon from '../assets/skills/htmlcss.png';
+import nodeIcon from '../assets/skills/nodejs.png';
+import expressIcon from '../assets/skills/express.png';
+import postgresqlIcon from '../assets/skills/postgresql.png';
+import redisIcon from '../assets/skills/redis.png';
+import dockerIcon from '../assets/skills/docker.png';
+import awsIcon from '../assets/skills/aws.png';
+import cicdIcon from '../assets/skills/cicd.png';
+import gitIcon from '../assets/skills/git.png';
+import vscodeIcon from '../assets/skills/vscode.png';
+import postmanIcon from '../assets/skills/postman.png';
+import figmaIcon from '../assets/skills/figma.png';
+import jestIcon from '../assets/skills/jest.png';
 
 const Skills = () => {
   const skills = [
@@ -8,7 +26,7 @@ const Skills = () => {
       items: [
         { name: 'React', icon: Code2 },
         { name: 'TypeScript', icon: FileJson },
-        { name: 'TailwindCSS', icon: Palette },
+      
         { name: 'HTML/CSS', icon: Layout }
       ]
     },
@@ -16,7 +34,15 @@ const Skills = () => {
       category: 'Backend',
       items: [
         { name: 'Node.js', icon: Server },
-        { name: 'Express', icon: Box },
+        { name: 'Express.js', icon: Box },
+        {name: 'Nest.js', icon: Server},
+        {name: 'MongoDB', icon: Server},
+        {name: 'Mongoose', icon: Server},
+        {name: 'GraphQL', icon: Server},
+        {name: 'Hasura', icon: Server},
+        {name: 'Socket.io', icon: Server},
+        {name: 'WebRTC', icon: Server},
+        {name: 'Microservices', icon: Server},
         { name: 'PostgreSQL', icon: Database },
         { name: 'Redis', icon: Cpu }
       ]
@@ -35,8 +61,7 @@ const Skills = () => {
       items: [
         { name: 'VS Code', icon: Terminal },
         { name: 'Postman', icon: Send },
-        { name: 'Figma', icon: FigmaIcon },
-        { name: 'Jest', icon: TestTube }
+    
       ]
     }
   ];
