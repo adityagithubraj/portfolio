@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Hotel, CreditCard, Receipt, FolderKanban, MessageCircle, Code, Layout, Database } from 'lucide-react';
+import { ExternalLink, Github, Hotel, CreditCard, Receipt, FolderKanban, MessageCircle, Code, Layout, Database, MessageSquare as ChatBubble, Bot as AI, Calendar, Globe } from 'lucide-react';
 
 const Projects = () => {
   const [filter, setFilter] = useState('professional');
@@ -82,56 +82,95 @@ const Projects = () => {
     }
   ];
 
+
+
   const personalProjects = [
+   
     {
-      title: 'Personal Blog Platform',
-      description: 'A modern blog platform built with React and Node.js, featuring a rich text editor and dynamic content management.',
-      image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643',
+      title: 'Mini-WhatsApp',
+      description: 'A real-time messaging app with group chats, private messaging, message formatting, online presence indication, and notifications.',
+      image: 'https://adityagithubraj.github.io/images/chatapp.jpg',
+      category: 'backend',
+      tech: ['ExpressJS', 'NodeJS', 'HTML', 'CSS', 'Socket.io'],
+      demo: 'https://mini-wathsapp.onrender.com/',
+      github: 'https://github.com/adityagithubraj/mini_Whatsapp',
+      icon: ChatBubble,
+      highlights: [
+        'Real-time messaging',
+        'Group & private chats',
+        'Online presence indication'
+      ]
+    },
+    {
+      title: 'ProChat',
+      description: 'ProChat, an AI-powered chat application using OpenAI API for seamless and intelligent conversations.',
+      image: 'https://adityagithubraj.github.io/images/pro.png',
       category: 'fullstack',
-      tech: ['React', 'Node.js', 'MongoDB', 'AWS'],
-      demo: 'https://demo.com',
-      github: 'https://github.com',
+      tech: ['HTML', 'CSS', 'JavaScript', 'OpenAI API', 'NodeJS', 'ExpressJS'],
+      demo: 'https://prochat-with-openai.netlify.app/',
+      github: 'https://github.com/adityagithubraj/prochat_Integrated_openai',
+      icon: AI,
+      highlights: [
+        'OpenAI-powered chatbot',
+        'Conversational AI',
+        'Real-time responses',
+        'User-friendly interface'
+      ]
+    },
+    {
+      title: 'SALONLEX',
+      description: 'Salon booking system with user registration, appointment booking, and admin management.',
+      image: 'https://adityagithubraj.github.io/images/home.png',
+      category: 'fullstack',
+      tech: ['MongoDB', 'ExpressJS', 'NodeJS', 'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'NPM', 'JWT'],
+      demo: 'https://salonlex.netlify.app/',
+      github: 'https://github.com/amar0705/nice-flesh-360',
+      icon: Calendar,
+      highlights: [
+        'User registration & login',
+        'JWT authentication',
+        'Admin appointment management',
+        'Online booking system'
+      ]
+    },
+
+    {
+      title: 'QR Code Chimp',
+      description: 'A QR code website with login, signup, authentication via Google & Facebook, JWT, and the ability to scan and read QR codes.',
+      image: 'https://adityagithubraj.github.io/images/qrchim.png',
+      category: 'fullstack',
+      tech: ['MongoDB', 'ExpressJS', 'NodeJS', 'HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+      demo: 'https://qr-code-chimp.netlify.app/index.html',
+      github: 'https://github.com/adityagithubraj/-direful-order-8525',
       icon: Code,
       highlights: [
-        'Rich text editing',
-        'Image optimization',
-        'SEO optimization',
-        'Comment system'
+        'Google & Facebook authentication',
+        'JWT-based authentication',
+        'QR code scanning and generation',
+        'Secure login & signup'
       ]
     },
+
     {
-      title: 'Portfolio Website',
-      description: 'A responsive portfolio website showcasing projects and skills, built with modern web technologies.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f',
+      title: 'Expedia.com Clone',
+      description: 'A travel booking website with login, signup, customer support, and a search system for flights, hotels, and rental cars.',
+      image: 'https://adityagithubraj.github.io/images/expediya.jpg',
       category: 'frontend',
-      tech: ['React', 'TypeScript', 'TailwindCSS'],
-      demo: 'https://demo.com',
-      github: 'https://github.com',
-      icon: Layout,
+      tech: ['HTML', 'CSS', 'JavaScript'],
+      demo: 'https://shimmering-stroopwafel-bf250f.netlify.app/index.html',
+      github: 'https://github.com/Kuldeepsingh921/Expedia-Clone',
+      icon: Globe,
       highlights: [
-        'Responsive design',
-        'Dark mode',
-        'Smooth animations',
-        'Performance optimized'
-      ]
-    },
-    {
-      title: 'Task Management API',
-      description: 'RESTful API for task management with authentication, authorization, and real-time updates.',
-      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b',
-      category: 'backend',
-      tech: ['Node.js', 'Express', 'PostgreSQL', 'Socket.io'],
-      demo: 'https://demo.com',
-      github: 'https://github.com',
-      icon: Database,
-      highlights: [
-        'JWT authentication',
-        'Real-time updates',
-        'Rate limiting',
-        'API documentation'
+        'User authentication',
+        'Customer support system',
+        'Travel search & booking',
+        'Responsive design'
       ]
     }
   ];
+
+  
+
 
   const getProjects = () => {
     if (filter === 'professional') {
