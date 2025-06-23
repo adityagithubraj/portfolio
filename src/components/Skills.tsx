@@ -1,94 +1,69 @@
 import React from 'react';
-import { Code2, FileJson, Palette, Layout, Server, Database, Cpu, Box, Container, Cloud, GitBranch, Github as Git, Terminal, Send, Figma as FigmaIcon, TestTube } from 'lucide-react';
-// Import skill icons
-import { Github as GitIcon } from '@primer/octicons-react';
-import reactIcon from '../assets/skills/react.png';
-import typescriptIcon from '../assets/skills/typescript.png';
-import tailwindIcon from '../assets/skills/tailwind.png';
-import htmlcssIcon from '../assets/skills/htmlcss.png';
-import nodeIcon from '../assets/skills/nodejs.png';
-import expressIcon from '../assets/skills/express.png';
-import postgresqlIcon from '../assets/skills/postgresql.png';
-import redisIcon from '../assets/skills/redis.png';
-import dockerIcon from '../assets/skills/docker.png';
-import awsIcon from '../assets/skills/aws.png';
-import cicdIcon from '../assets/skills/cicd.png';
-import gitIcon from '../assets/skills/git.png';
-import vscodeIcon from '../assets/skills/vscode.png';
-import postmanIcon from '../assets/skills/postman.png';
-import figmaIcon from '../assets/skills/figma.png';
-import jestIcon from '../assets/skills/jest.png';
+
+// A card for a category of skills
+const SkillCategoryCard = ({ title, skills }: { title: string; skills: { name: string; iconUrl: string }[] }) => (
+  <div className="bg-white dark:bg-gray-800/50 p-6 rounded-2xl shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+    <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">{title}</h3>
+    <div className="flex flex-wrap justify-center gap-6">
+      {skills.map(skill => <SkillIcon key={skill.name} {...skill} />)}
+    </div>
+  </div>
+);
+
+// The individual skill icon + name (transparent background)
+const SkillIcon = ({ iconUrl, name }: { iconUrl: string, name: string }) => (
+  <div className="flex flex-col items-center justify-center text-center p-2 transition-transform duration-300 hover:scale-110">
+    <img src={iconUrl} alt={`${name} icon`} className="w-12 h-12 object-contain" />
+    <p className="mt-2 text-sm font-medium text-gray-600 dark:text-gray-300">{name}</p>
+  </div>
+);
 
 const Skills = () => {
-  const skills = [
-    {
-      category: 'Frontend',
-      items: [
-        { name: 'React', icon: Code2 },
-        { name: 'TypeScript', icon: FileJson },
-      
-        { name: 'HTML/CSS', icon: Layout }
-      ]
-    },
-    {
-      category: 'Backend',
-      items: [
-        { name: 'Node.js', icon: Server },
-        { name: 'Express.js', icon: Box },
-        {name: 'Nest.js', icon: Server},
-        {name: 'MongoDB', icon: Server},
-        {name: 'Mongoose', icon: Server},
-        {name: 'GraphQL', icon: Server},
-        {name: 'Hasura', icon: Server},
-        {name: 'Socket.io', icon: Server},
-        {name: 'WebRTC', icon: Server},
-        {name: 'Microservices', icon: Server},
-        { name: 'PostgreSQL', icon: Database },
-        { name: 'Redis', icon: Cpu }
-      ]
-    },
-    {
-      category: 'DevOps',
-      items: [
-        { name: 'Docker', icon: Container },
-        { name: 'AWS', icon: Cloud },
-        { name: 'CI/CD', icon: GitBranch },
-        { name: 'Git', icon: Git }
-      ]
-    },
-    {
-      category: 'Tools',
-      items: [
-        { name: 'VS Code', icon: Terminal },
-        { name: 'Postman', icon: Send },
-    
-      ]
-    }
-  ];
+  const skills = {
+    frontend: [
+      { name: 'React', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+      { name: 'TypeScript', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+      { name: 'JavaScript', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+      { name: 'HTML5', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+      { name: 'CSS3', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+      { name: 'TailwindCSS', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg' },
+    ],
+    backend: [
+      { name: 'Node.js', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+      { name: 'Python', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+      { name: 'Express.js', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+      { name: 'Nest.js', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg' },
+      { name: 'MongoDB', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+      { name: 'PostgreSQL', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+      { name: 'SQL', iconUrl: 'https://www.svgrepo.com/show/303229/sql-database-sql-logo.svg' },
+      { name: 'Redis', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg' },
+      { name: 'Pinecone', iconUrl: 'https://www.vectorlogo.zone/logos/pinecone/pinecone-icon.svg' },
+    ],
+    devops: [
+      { name: 'Docker', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+      { name: 'AWS', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg' },
+      { name: 'Git', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+    ],
+    tools: [
+      { name: 'VS Code', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+      { name: 'Cursor', iconUrl: 'https://cursor.sh/brand/logo.svg' },
+      { name: 'Postman', iconUrl: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg' },
+      { name: 'Figma', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+    ],
+  };
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="skills" className="py-20 bg-gray-100 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skills.map((skillGroup, index) => (
-            <div key={index} className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-lg">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                {skillGroup.category}
-              </h3>
-              <ul className="space-y-4">
-                {skillGroup.items.map((skill, skillIndex) => (
-                  <li
-                    key={skillIndex}
-                    className="flex items-center text-gray-600 dark:text-gray-300"
-                  >
-                    <skill.icon className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-3" />
-                    <span>{skill.name}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-16 text-center">
+          My Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">Skillset</span>
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <SkillCategoryCard title="Frontend Development" skills={skills.frontend} />
+            <SkillCategoryCard title="Backend Development" skills={skills.backend} />
+            <SkillCategoryCard title="DevOps & Infrastructure" skills={skills.devops} />
+            <SkillCategoryCard title="Development Tools" skills={skills.tools} />
         </div>
       </div>
     </section>
